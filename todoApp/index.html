@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-wrapper">
+        <div class="task-dash">
+            <p class="today-label">Today's Tasks</p>
+            <div class="info-wrapper">
+                <p class="info-text task-completed">0</p>
+                <p class="divider">/</p>
+                <p class="info-text task-counter">0</p>
+            </div>
+            <div class="progress-bar-container">
+                <div class="progress-bar"></div>
+            </div>
+        </div>
+        <div class="task-list-container">
+            <div class="task-input-container">
+                <input type="text" placeholder="Enter task" class="task-input">
+                <button class="add-btn">+</button>
+            </div>
+            <ul class="task-items">
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

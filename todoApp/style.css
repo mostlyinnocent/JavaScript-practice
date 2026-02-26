@@ -1,0 +1,266 @@
+:root{
+    --main-background: #fafaf8;
+    --app-background: #2a2c41;
+    --widget-color: #e4eef0;
+    --progress-color: #ff724c;
+    --hover-accent: #ff734ccd;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--main-background);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.app-wrapper{
+    height: 550px;
+    width: 400px;
+    border-radius: 8px;
+    background: var(--app-background);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0px;
+    box-sizing: border-box;
+} 
+
+.task-dash {
+    width: 90%;
+    height: 150px;
+    background-color: var(--widget-color);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    display: flex;
+    position: relative;
+}
+
+.task-dash .today-label {
+    font-size: 20px;
+    color: rgba(21, 1, 1, 0.632);
+    font-weight: bolder;
+    margin-top: 30px;
+    margin-left: 10px;
+}
+
+.info-wrapper {
+    height: 50px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    margin-left: 120px;
+}
+.divider{
+    font-size: 40px;
+}
+.info-text {
+    font-size: 30px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.638);
+}
+
+.progress-bar-container {
+    height: 25px;
+    width: 95%;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    top: 70%;
+    transform: translateY(-50%);
+    right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 3px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background-color: var(--progress-color);
+    border-radius: 0px 4px 4px 0px ;
+}
+
+.task-list-container {
+    height: calc(450px - 100px);
+    width: 90%;
+    background-color: var(--widget-color);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.task-input-container {
+    height: 50px;
+    width: 95%;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.task-input {
+    flex: 1;
+    height: 35px;
+    border: none;
+    outline: none;
+    padding: 10px;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 15px;
+    border-radius: 5px;
+    box-shadow: inset 0px 0px 2px rgba(0, 0, 0, 0.632);
+    color: rgba(0, 0, 0);
+}
+
+.add-btn {
+    height: 35px;
+    width: 35px;
+    border: none;
+    border-radius: 5px;
+    background-color: #fafaff;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.216);
+    color: rgba(0, 0, 0, 0.397);
+    font-weight: 1000;
+    margin-left: 5px;
+    box-sizing: border-box;
+    transition: 0.3s ease-in-out;
+}
+
+.add-btn:active{
+    background-color: var(--hover-accent);
+    transform: translateY(3px);
+}
+
+.task-items {
+    height: 80%;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.task {
+    height: 35px;
+    width: 100%;
+    /* background-color: white; */
+    display: flex;
+    align-items: center;
+    padding: 5px 0px;
+    box-sizing: border-box;
+    gap: 5px;
+    border-radius: 5px;
+    /* box-shadow: inset 0px 0px 2px rgba(0, 0, 0, 0.632); */
+    position: relative;
+}
+
+.task:hover {
+    background-color: var(--hover-accent);
+}
+
+.task:hover > .task-text {
+    color: #000000;
+}
+
+.check-box {
+    height: 20px;
+    width: 20px;
+    border: none;
+    outline: none;
+}
+
+.task-text {
+    color: rgba(0, 0, 0);
+    font-size: 15px;
+}
+
+.controls {
+    display: flex;
+    gap: 5px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 5px;
+}
+
+.delete-btn {
+    opacity: 0.4;
+    height: 20px;
+    width: 20px;
+    display: flex;
+    background-color: transparent;
+    border: none;
+    transition: 0.2s ease-in-out;
+}
+
+.delete-btn:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.delete-btn:active {
+    transform: translateY(2px);
+}
+
+.delete-icon {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.edit-btn {
+    opacity: 0.4;
+    height: 20px;
+    width: 20px;
+    display: flex;
+    background-color: transparent;
+    border: none;
+    transition: 0.2s ease-in-out;
+}
+
+.edit-btn:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.edit-btn:active {
+    transform: translateY(2px);
+}
+
+.edit-icon {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.task.completed .task-text {
+    text-decoration: line-through;
+    opacity: 0.3;
+}
