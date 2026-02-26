@@ -1,0 +1,242 @@
+:root {
+    --calc-background: #000000;
+    --border-accent: #8a8ab3;
+    --fnc-button-color: #ffb94a;
+    --num-button-color: #eeeeee;
+}
+
+.prosto-one-regular {
+  font-family: "Prosto One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.rubik-mono-one-regular {
+  font-family: "Rubik Mono One", monospace;
+  font-style: normal;
+}
+
+
+body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+}
+
+.frame {
+    height: 600px;
+    width: 350px;
+    background-color: var(--calc-background);
+    border-radius: 18px;
+    box-sizing: border-box;
+    box-shadow: 5px solid black;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.516);
+    gap: 20px;
+
+}
+
+.display-screen {
+    margin-top: 50px;
+    height: 100px;
+    width: 300px;
+    background-color: rgb(224, 241, 255);
+    border-radius: 50px;
+    box-sizing: border-box;
+    border: 8px solid white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+
+    padding: 14px 20px;
+}
+
+
+
+.expression{
+    font-size: 1.2rem;
+    opacity: 0.5;
+    font-family: "prosto one";
+}
+
+.result {
+    font-size: 2rem;
+    font-family: "rubik mono one";
+
+}
+
+.button-grid {
+    margin-top: 30px;
+    height: 350px;
+    width: 300px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas: 
+    "clear del percentage slash"
+    "seven eight nine star"
+    "four five six minus"
+    "one two three plus"
+    "deci zero-area equal equal";
+
+    gap: 10px;
+}
+
+button {
+  background: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 
+    box-shadow 0.2s ease,
+    transform 0.1s ease;
+  cursor: pointer;
+}
+
+button:focus-visible{
+  outline: 3px solid rgba(250, 163, 7, 0.8);
+  outline-offset: 3px;
+}
+
+button:hover{
+    box-shadow: 
+        inset 3px 3px 4px rgba(255,255,255,0.35),
+        inset -1px -1px 2px rgba(0,0,0,0.45);
+    transform: scale(0.97);
+}
+
+button:active {
+    transform: scale(0.95) translateY(1px);
+    box-shadow:
+        inset 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.button-disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.fnc-btn {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border-radius: 50px;
+    background-color: var(--fnc-button-color); 
+    border: none;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.5rem;
+}
+
+.num-btn {
+    height: 100%;
+    width: 100%;
+    border-radius: 16px;
+    background-color: var(--num-button-color);
+    border: none;
+    box-sizing: border-box;
+    /* box-shadow: inset -2px -2px 2px rgba(45, 45, 45, 0.671); */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.5rem;
+    color: rgb(0, 0, 0);
+}
+
+.num-btn:hover {
+  box-shadow:
+    inset 1px 1px 2px rgba(255, 255, 255, 0.401),
+    inset -1px -1px 2px rgba(0,0,0,0.35);
+}
+
+.clear-btn {
+    grid-area: clear;
+    background: linear-gradient(135deg, #faa307, #f48c06, #e85d04);;
+    font-size: 1.2rem;
+}
+
+.delete-btn {
+    grid-area: del;
+    font-size: 1.2rem;
+}
+
+.percent-btn {
+    grid-area: percentage;
+}
+
+.slash-btn {
+    grid-area: slash;
+}
+
+.seven-btn {
+    grid-area: seven;
+}
+
+.eight-btn {
+    grid-area: eight;
+}
+
+.nine-btn {
+    grid-area: nine;
+}
+
+.star-btn {
+    grid-area: star;
+}
+
+.four-btn {
+    grid-area: four;
+}
+
+.five-btn{
+    grid-area: five;
+}
+
+.six-btn {
+    grid-area: six;
+}
+
+.substract-btn {
+    grid-area: minus;
+}
+
+.one-btn {
+    grid-area: one;
+}
+
+.two-btn {
+    grid-area: two;
+}
+
+.three-btn {
+    grid-area: three;
+}
+
+.plus-btn {
+    grid-area: plus;
+}
+
+.dot-btn {
+    grid-area: deci;
+}
+
+.zero-btn {
+    grid-area: zero-area;
+}
+
+.equal-btn {
+    border-radius: 999px;
+    grid-area: equal;
+    background: linear-gradient(135deg, #faa307, #f48c06, #e85d04);
+}
+
+
