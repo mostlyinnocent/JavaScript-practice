@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+
+    </head>
+<body>
+    <div class="wrapper" id="wrapper">
+        <div class="wrap-left">
+            <div class="image-container">
+                <img src="images/SunsetFuji.jpg" alt="Mt Fuji" class="hero-image">
+                <div class="logo-container">
+                    <h1 class="logo-text">W</h1>
+                </div>
+                <div class="tagline-container">
+                    <label class="tagline" for="tagline">
+                        "Your Destination,
+                        Our Waypoint."
+                    </label>
+                </div>
+                <div class="website-tag">
+                    <a href="www.wanderlust.com">wanderlust.com</a>
+                </div>
+            </div>
+        </div>
+        <div class="wrap-right">
+            <div class="register-page">
+                <h1 class="info-label">Create an Account</h1>
+                <label for="log-in">Already have an account?<a href="Log-in" id="log-in-link">Log-in</a></label>
+                <main class="form-wrapper">
+                    <form action="" class="form" id="form">
+                        <input type="text" placeholder="First Name" class="first-name" id="first-name" data-first-name required>
+                        <input type="text" placeholder="Last Name" class="last-name" data-last-name id="last-name">
+                        <input type="email" placeholder="example@email.com" class="email" id="email" data-email required>
+                        <div class="email-modal">
+                            <p id="error-text-email">Enter valid email!</p>
+                        </div>
+                        <input type="password" placeholder="password" 
+                        class="password" id="password" data-password required>
+                        <div class="password-modal">
+                            <p id="pass-text">Invalid Password</p>
+                        </div>
+                        <button type="button" class="create-button" id="button">Create Account</button>
+                    </form>
+                </main>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
