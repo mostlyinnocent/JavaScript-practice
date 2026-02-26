@@ -1,0 +1,42 @@
+:root {
+    --bg: white;
+    --toggle-bg: black;
+    --knob-bg: white;
+    --knob-x: 0;
+}
+
+body.dark {
+    --bg: black;
+    --toggle-bg: white;
+    --knob-bg: black;
+    --knob-x: 20px;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background: var(--bg);
+    transition: background 0.2s ease;
+}
+
+.theme-toggle {
+    width: 50px;
+    height: 30px;
+    padding: 2px;
+    border-radius: 50px;
+    border: 1px solid #333;
+    background: var(--toggle-bg);
+    cursor: pointer;
+    position: relative;
+}
+
+.knob {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: var(--knob-bg);
+    transform: translateX(var(--knob-x));
+    transition: transform 0.2s ease;
+}
