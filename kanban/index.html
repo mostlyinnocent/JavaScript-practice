@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban Board</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <header class="kanban-header">
+            <h3 class="kanban-title">Kanban Board</h3>
+            <button class="add-task-button" id="add-task-btn"><img src="icons/plus-circle-svgrepo-com.svg" alt="plus-icon"></button>
+        </header>
+        <section class="kanban-board">
+            <div class="kanban-grid">
+                <div class="todo-col column" id="todo-col">
+                    <h4 class="column-lable">To-do</h4>
+                    <template id="task-template">
+                    <div class="task" draggable="true">
+                        <textarea name="task-input" class="task-input" placeholder="Enter task" readonly></textarea>
+                    </div>
+                    </template>
+                </div>
+                <div class="progress-col column" id="progress-col"><h4 class="column-lable">In-progress</h2></div>
+                <div class="done-col column" id="done-col"><h4 class="column-lable">Done</h2></div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
