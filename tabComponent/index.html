@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tab Component</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="tabs">
+    <ul class="tab-list">
+        <li><button class="tab" data-tab="profile"><img src="icons/profile.png" class="tab-icon" alt="profile-icon"></button></li>
+        <li><button class="tab" data-tab="security"><img src="icons/credit-card.png" class="tab-icon" alt="security-icon"></button></li>
+        <li><button class="tab" data-tab="preferences"><img src="icons/preferences.png" class="tab-icon" alt="preferences-icon"></button></li>
+    </ul>
+    </div>
+    <div class="tab-content">
+        <section class="content" data-content="profile">Profile stuff</section>
+        <section class="content" data-content="security">security stuff</section>
+        <section class="content" data-content="preferences">Prf stuff</section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
