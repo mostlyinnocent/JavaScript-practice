@@ -1,0 +1,233 @@
+:root{
+    --main-bg: #F39F5A;
+    --wrapper-bg: #451952;
+    --main-border-radius: 28px;
+    --task-font: 16px;
+    --task-font-color: #2c3f70;
+    --task-bg: #e9e2ff;
+    --btn-size: 30px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--main-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper {
+    height: 588px;
+    width: 388px;
+
+    background-color:var(--wrapper-bg);
+    border-bottom: none;
+    border-right: none;
+    border-radius: var(--main-border-radius);
+    box-shadow: 4px 4px 20px rgb(0, 0, 0, 0.5),
+                inset 3px 3px 3px rgba(255, 255, 255, 0.3);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    padding: 30px;
+
+    position: relative;
+}
+
+.task-dash {
+    margin-top: 20px;
+    height: 50px;
+    width: 350px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 10px;
+}
+
+.todays-tasks{
+    color: white;
+    font-size: 38px;
+    font-weight: 800;
+}
+
+.progress-ring {
+    height: 100px;
+    width: 100px;
+    position: relative;
+}
+
+.progress-ring {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress-rate {
+  position: absolute;
+  font-size: 14px;
+  color: wheat;
+}
+
+.task-container {
+    margin-top: 20px;
+    height: 380px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+
+ul{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 18px;
+    overflow: auto;
+}
+
+li{
+    list-style: none;
+}
+
+.task{
+    height: 40px;
+    width: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--task-bg);
+    border-radius: 4px;
+}
+
+.task-left{
+    height: 40px;
+    width: 350px;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    gap: 5px;
+}
+
+.checkbox {
+    cursor: pointer;
+}
+
+.task-input{
+    width: 250px;
+    height: 30px;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    box-shadow: inset 0px 0px 2px rgb(88, 88, 88);
+    padding-left: 10px;
+}
+
+.task-input.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.task-input:focus{
+    outline: 2px solid rgb(213, 181, 255);
+}
+
+.task-right{
+    height: 40px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.task-btn {
+    height: var(--btn-size);
+    width: var(--btn-size);
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background-color: transparent;
+    cursor: pointer;
+    box-shadow: 0 0 2px rgb(68, 68, 68);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.task-btn:hover{
+    box-shadow: 0 0 2px rgb(0, 0, 0);
+}
+
+.task-btn>img {
+    height: 70%;
+    object-fit: cover;
+    display: block;
+    opacity: 0.3;
+    transition: 0.2s ease-in-out;
+}
+
+.task-btn>img:hover {
+    opacity: 1;
+    height: 60%;
+}
+
+.add-task {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+
+    padding: 15px;
+
+    
+}
+
+.add-task>img {
+    height: 100%;
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius:10px;
+    transition: 0.2s ease-in-out;
+    opacity: 0.8;
+}
+
+.add-task:hover img{
+    transform: scale(1.7);
+    opacity: 1;
+}
+
+.add-task:active img {
+    transform: scale(0.9);
+    opacity: 0.6;
+}

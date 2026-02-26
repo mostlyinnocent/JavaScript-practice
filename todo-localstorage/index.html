@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo with localStorage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="wrapper">
+        <section class="task-dash">
+            <h1 class="todays-tasks">Today's Tasks</h1>
+            <div class="progress-ring">
+<div class="progress-ring">
+  <svg width="80" height="80">
+    <!-- outer ring -->
+    <circle
+        cx="40"
+        cy="40"
+        r="30"
+        stroke="#E8E2DB"
+        stroke-width="8"
+        fill="transparent"
+    />
+
+    <!-- progress ring -->
+    <circle
+        class="progress-circle"
+        cx="40"
+        cy="40"
+        r="30"
+        stroke="#B7BDF7"
+        stroke-width="8"
+        fill="transparent"
+        stroke-linecape="round"
+        transfrom="rotate(-90 40 40)"
+    />
+    </svg>
+
+        <span class="progress-rate">0%</span>
+    </div>
+
+                </svg>
+            </div>
+        </section>
+        <section class="task-container">
+            <ul class="task-list">
+                <template id="task-template">
+                    <li class="task" data-task data-id="">
+                        <div class="task-left">
+                            <input type="checkbox" data-task-toggle class="checkbox">
+                            <input type="text" class="task-input" value="Enter a task" data-task-input readonly>
+                        </div>
+                        <div class="task-right">
+                            <button class="task-btn edit-task" aria-label="Edit Task" data-task-edit>
+                                <img src="icons/edit.png" alt="edit-icon">
+                            </button>
+                            <button class="task-btn delete-task" aria-label="Delete Task" data-task-delete>
+                                <img src="icons/delete.png" alt="delete-icon">
+                            </button>
+                        </div>
+                    </li>
+                </template>
+            </ul>
+        </section>
+        <button class="add-task" type="button" id="add-task-btn" aria-label="Add Task">
+            <img src="icons/plus.png" alt="plus-icon">
+        </button>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
