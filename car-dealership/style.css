@@ -1,0 +1,222 @@
+:root {
+    --bg: rgb(239, 239, 239);
+    --card-bg: white;
+    --dark-font: black;
+    --light-font: #535457;
+    --btn-color: black;
+    --btn-text: white;
+    --toggle-btn-bg: black;
+    --knob: white;
+    --knob-pos: -70%;
+}
+
+body.dark {
+    --bg: #0d1b2a;
+    --card-bg: #1b263b;
+    --dark-font: #e0e1dd;
+    --light-font: #778da9;
+    --btn-color: #415a77;
+    --btn-text: #e0e1dd;
+    --toggle-btn-bg: rgb(255, 255, 255);
+    --knob: rgb(0, 0, 0);
+    --knob-pos: 80%;
+}
+
+
+.zalando-sans-expanded {
+  font-family: "Zalando Sans Expanded", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
+
+
+.oswald {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+.roboto-mono {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.pt-serif-bold-italic {
+  font-family: "PT Serif", serif;
+  font-weight: 800;
+  font-style: bold;
+}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 200vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: var(--bg);
+    position: relative;
+}
+
+.button-container{
+    position: absolute;
+    height:30px;
+    width: 60px;
+    border-radius: 40px;
+    background-color: var(--toggle-btn-bg);
+    position: fixed;
+    z-index: 20;
+    top: 30px;
+    right: 18px;
+    padding-left: 1px;
+    padding-right: 1px;
+    cursor: pointer;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toggle-btn {
+    background-color: var(--knob);
+    height: 22px;
+    width: 22px;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    transform: translateX(var(--knob-pos));
+    transition: 0.1s ease-in-out;
+}
+
+.app-name {
+    width: 100%;
+    font-size: 30px;
+    position: fixed;
+    top: -10px;
+    color: var(--dark-font);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+    font-family: "Zalando Sans Expanded";
+}
+
+.card-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 100px;
+    padding: 80px 0;
+    gap: 5em;
+}
+
+.car-card {
+    height: 608px;
+    width: 300px;
+    padding: 20px 8px;
+    gap: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.car-card:hover {
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.car-label {
+    color: var(--dark-font);
+    font-family: "PT Serif", serif;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.car-image-container{
+    height: 250px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.car-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transition: 0.5s ease-in-out;
+}
+
+.car-image:hover {
+    transform: scale(1.1);
+}
+
+.car-details{
+    font-family: "Oswald", sans-serif;
+    height: 300px;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.qa {
+    font-size: 24px;
+    color: var(--dark-font);
+}
+
+.qf {
+    color: var(--light-font);
+}
+
+.book-button {
+    height: 80px;
+    width: 100%;
+    background-color: var(--btn-color);
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.book-button:hover {
+    opacity: 0.7;
+}
+
+a {
+    font-family: "Roboto Mono", monospace;
+    text-decoration: none;
+    color: var(--btn-text);
+    font-size: 18px;
+}
