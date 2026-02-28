@@ -25,12 +25,13 @@ main{
     padding: 28px;
 }
 
-nav{
+ul{
     height: 100px;
     width: 700px;
     display: flex;
     align-items: center;
     gap: 30px;
+    list-style: none;
 }
 
 .user-tab{
@@ -41,20 +42,13 @@ nav{
     justify-content: center;
     border-radius: 8px;
     background-color: #f3f3f3;
-    outline: 1px solid #d1d1d1;
+    border: none;
+    outline: 2px solid #d1d1d1;
     cursor: pointer;
 }
 
 .user-tab.blur{
     filter: blur(2px);
-}
-
-.menu-container{
-    margin-top: 20px;
-    height: 300px;
-    width: 700px;
-    display: flex;
-    align-items: center;
 }
 
 .context-menu {
@@ -84,7 +78,7 @@ nav{
 
 }
 
-button{
+.comm-btn{
     border: none;
     background-color: transparent;
     outline: 1px solid #ababab;
@@ -121,6 +115,9 @@ button{
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    background-color: rgb(250, 250, 250);
+    border: none;
+    outline: none;
     border-bottom: 1px solid rgb(190, 190, 190);
     cursor: pointer;
 }
@@ -163,8 +160,10 @@ button{
 
 .delete-button{
     height: 40px;
-    width: 90px;
+    width: 300px;
+    border: none;
     outline: none;
+    border-radius: 18px;
     background-color: rgba(255, 165, 165, 0.4);
     display: flex;
     align-items: center;
@@ -172,6 +171,8 @@ button{
     gap: 10px;
     font-size: 15px;
     color: rgb(255, 0, 0);
+    padding: 10px;
+    cursor: pointer;
 }
 
 .delete-icon{
