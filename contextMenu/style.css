@@ -64,17 +64,12 @@ ul{
     align-items: center;
     justify-content: flex-start;
     position: relative;
+
+    display: none;
 }
 
-.context-menu::after{
-    content: "";
-    position: absolute;
-    left: 20px;
-    bottom: 100%;
-    transform: rotateZ(90deg);
-    border-style: solid;
-    border-width: 0.5rem;
-    border-color: transparent rgb(77, 70, 70) transparent transparent;
+.context-menu.open{
+    display: flex;
 }
 
 .menu-header{
