@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Editor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Text Editor</h1>
+    <main class="editor-container">
+        <section class="task-menu">
+            <div class="font-tab">Style 1</div>
+            <div class="font-style-tab">
+                <button class="font-bold-btn">
+                    <p class="btn-desc bold">B</p>
+                </button>
+                <button class="font-italic-btn">
+                    <p class="btn-desc italic">I</p>
+                </button>
+                <input type="color" class="color-picker" name="color-picker" id="color-picker">
+            </div>
+            <div class="text-alignment-tab">
+                <button class="align left-align">
+                    <img src="icons/left-align.png" alt="set text alignment to left" class="text-align-icon">
+                </button>
+                <button class="align center-align">
+                    <img src="icons/center-align.png" alt="set text alignment to center" class="text-align-icon">
+                </button>
+                <button class="align right-align">
+                    <img src="icons/right-align.png" alt="set text alignment to right" class="text-align-icon">
+                </button>
+            </div>
+        </section>
+        <textarea name="textarea" class="text-input-area" id="text-input-area">
+        </textarea>
+    </main>
+</body>
+</html>
