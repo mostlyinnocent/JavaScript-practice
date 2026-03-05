@@ -10,7 +10,16 @@
     <h1>Text Editor</h1>
     <main class="editor-container">
         <section class="task-menu">
-            <div class="font-tab">Style 1</div>
+            <div class="font-tab">
+                <select name="font-selector" class="font-selector" id="font-selector">
+                    <option value="Arial, sans-serif">Aria</option>
+                    <option value="'Courier New', monospace">Courier</option>
+                    <option value="'Times New Roman', serif">Times New Roman</option>
+                    <option value="Georgia, serif">Georgia</option>
+                    <option value="Verdana, sans-serif">Verdana</option>
+                </select>
+            </div>
+            <input type="number" class="font-size-selector" id="font-size-selector" min="8" max="72" value="16">
             <div class="font-style-tab">
                 <div class="btn-container">
                     <button class="bold-btn" id="bold-btn">B</button>

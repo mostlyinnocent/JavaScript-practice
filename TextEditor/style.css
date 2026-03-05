@@ -33,7 +33,7 @@ h1{
 }
 
 .task-menu{
-    width: 550px;
+    width: 650px;
     height: 70px;
     background-color: rgb(255, 255, 255);
     border-radius: 80px;
@@ -58,6 +58,26 @@ h1{
     justify-content: center;
     color: rgb(46, 46, 46);
     cursor: pointer;
+}
+
+.font-selector{
+    height: 100%;
+    width: 100%;
+    border-radius: 30px;
+    border: none;
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    cursor: pointer;
+}
+
+.font-size-selector{
+    height: 50px;
+    width: 40px;
+    outline: none;
+    background-color: rgb(234, 234, 234);;
+    border: none;
+    border-radius: 3px;
+    padding-left: 5px;
 }
 
 .font-style-tab{
@@ -186,6 +206,9 @@ h1{
     padding-top: 50px;
     font-family: 'Courier New', Courier, monospace;
     color: #000;
+    text-align: start;
+
+    font-size: 16px;
 
     mask-image: linear-gradient(to bottom, red, blue var(--fade-amonut), blue calc(100% - var(--fade-amonut)), transparent);
 }
