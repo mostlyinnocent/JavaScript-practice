@@ -12,12 +12,12 @@
         <section class="task-menu">
             <div class="font-tab">Style 1</div>
             <div class="font-style-tab">
-                <button class="font-bold-btn">
-                    <p class="btn-desc bold">B</p>
-                </button>
-                <button class="font-italic-btn">
-                    <p class="btn-desc italic">I</p>
-                </button>
+                <div class="btn-container">
+                    <button class="bold-btn" id="bold-btn">B</button>
+                </div>
+                <div class="btn-container">
+                    <button class="italic-btn" id="italic-btn">I</button>
+                </div>
                 <input type="color" class="color-picker" name="color-picker" id="color-picker">
             </div>
             <div class="text-alignment-tab">
@@ -35,5 +35,6 @@
         <textarea name="textarea" class="text-input-area" id="text-input-area">
         </textarea>
     </main>
+    <script src="script.js"></script>
 </body>
 </html>
