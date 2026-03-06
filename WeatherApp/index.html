@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="app-grid">
+        <header class="app-header">
+            <h1 class="city-name">Some City</h1>
+            <span class="date-time">date-time</span>
+        </header>
+        <div class="app-search">
+            <input type="text" class="search-bar" placeholder="Search a location">
+            <button class="search-button"><img class="search-icon" src="icons/search.png" alt="Search Weather"></button>
+        </div>
+        <section class="app-weather">
+            <div class="weather-left">
+                <label for="temperature" class="temp">27</label>
+                <div class="unit-btns">
+                    <button class="c-btn">C</button>
+                    <button class="f-btn">F</button>
+                </div>
+            </div>
+            <div class="weather-right">
+                <div class="weather-icon-container">
+                    <img class="weather-icon" src="icons/sun.png" alt="Weather Visualization">
+                </div>
+                <label for="weather description" class="weather-desc">Sunny</label>
+            </div>
+        </section>
+        <section class="app-stats">
+            <div class="stats-top">
+                <div class="wind"><img class="wind-icon" src="icons/wind.png" alt=""></div>
+                <span class="wind-spd">20</span>
+            </div>
+            <div class="stats-bottom">
+                <div class="humidity"><img class="humidity-icon" src="icons/humidity.png" alt="" srcset=""></div>
+                <span class="humidity-desc">28%</span>
+            </div>
+        </section>
+        <footer class="app-footer">
+            <div class="day day1">Monday</div>
+            <div class="day day2">Tuesday</div>
+            <div class="day day3">Wednesday</div>
+            <div class="day day4">Thursday</div>
+            <div class="day day5">Friday</div>
+            <div class="day day6">Saturday</div>
+            <div class="day day7">Sunday</div>
+        </footer>
+    </main>
+</body>
+</html>
