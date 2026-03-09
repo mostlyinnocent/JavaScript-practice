@@ -13,42 +13,68 @@
             <span class="date-time">date-time</span>
         </header>
         <div class="app-search">
-            <input type="text" class="search-bar" placeholder="Search a location">
-            <button class="search-button"><img class="search-icon" src="icons/search.png" alt="Search Weather"></button>
+            <input type="search" class="search-bar" placeholder="Search a location">
+            <button type="submit" class="search-button"><img class="search-icon" src="icons/search.png" alt="Search Weather"></button>
         </div>
         <section class="app-weather">
-            <div class="weather-left">
-                <label for="temperature" class="temp">27</label>
-                <div class="unit-btns">
-                    <button class="c-btn">C</button>
-                    <button class="f-btn">F</button>
-                </div>
-            </div>
-            <div class="weather-right">
-                <div class="weather-icon-container">
-                    <img class="weather-icon" src="icons/sun.png" alt="Weather Visualization">
-                </div>
-                <label for="weather description" class="weather-desc">Sunny</label>
+            <p class="temp-text">23°</p>
+            <div class="unit-btn-wrapper">
+                <button class="unit-btn" id="celsious-btn">C</button>
+                <button class="unit-btn" id="faren-btn">F</button>
             </div>
         </section>
         <section class="app-stats">
-            <div class="stats-top">
-                <div class="wind"><img class="wind-icon" src="icons/wind.png" alt=""></div>
-                <span class="wind-spd">20</span>
+            <div class="stat-left">
+                <img src="icons/clouds.png" alt="Weather Visualization" class="weather-icon">
             </div>
-            <div class="stats-bottom">
-                <div class="humidity"><img class="humidity-icon" src="icons/humidity.png" alt="" srcset=""></div>
-                <span class="humidity-desc">28%</span>
+            <div class="stat-right">
+                <div class="wind-row">
+                    <div class="wind">
+                    </div>
+                    <p class="wind-spd stat-val">17</p>
+                </div>
+                <div class="humidity-row">
+                    <div class="humidity"></div>
+                    <p class="hum-value stat-val">20%</p>
+                </div>
+                <div class="aqi-row">
+                    <div class="aqi"></div>
+                    <p class="aqi-value stat-val">8</p>
+                </div>
             </div>
         </section>
         <footer class="app-footer">
-            <div class="day day1">Monday</div>
-            <div class="day day2">Tuesday</div>
-            <div class="day day3">Wednesday</div>
-            <div class="day day4">Thursday</div>
-            <div class="day day5">Friday</div>
-            <div class="day day6">Saturday</div>
-            <div class="day day7">Sunday</div>
+            <ul class="app-days">
+                <li class="day mon">
+                    Mon
+                    <div class="day-weather cloudy"></div>
+                    <div class="day-temp">24°</div>
+                </li>
+                <li class="day tue">Tue
+                    <div class="day-weather sunny"></div>
+                    <div class="day-temp">24°</div>
+                </li>
+                <li class="day wed">Wed
+                    <div class="day-weather rainy"></div>
+                    <div class="day-temp">24°</div>
+                </li>
+                <li class="day thu">Thu
+                    <div class="day-weather heavy-rain"></div>
+                    <div class="day-temp">24°</div>
+                </li>
+                <li class="day fri">Fri
+                    <div class="day-weather storm"></div>
+                    <div class="day-temp">24°</div>
+                </li>
+                <li class="day sat">Sat
+                    <div class="day-weather snowy"></div>
+                    <div class="day-temp">24°</div>
+                </li>
+                <li class="day sun">Sun
+                    <div class="day-weather partly-cloudy"></div>
+                    <div class="day-temp">24°</div>
+                </li>
+            </ul>
         </footer>
     </main>
 </body>
