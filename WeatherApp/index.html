@@ -9,13 +9,23 @@
 <body>
     <main class="app-grid">
         <header class="app-header">
-            <h1 class="city-name" aria-live="polite" data-city>Some City</h1>
+            <h1 class="city-name" aria-live="polite" data-city>
+                Some City
+            </h1>
             <span class="date-time" aria-live="polite" data-datetime>date-time</span>
         </header>
         <form id="searchField" class="app-search">
-            <label for="city-search" class="visually-hidden">Search city</label>
+
+            <label for="city-search" class="visually-hidden">
+                Search city
+            </label>
+
             <input type="search" id="city-search" class="search-bar" placeholder="Enter city" aria-label="Search city weather">
-            <button type="submit" class="search-button"><img class="search-icon" src="icons/search.png" alt="Search Weather"></button>
+
+            <button type="submit" class="search-button">
+                <img class="search-icon" src="icons/search.png" alt="Search Weather">
+            </button>
+            
         </form>
         <article class="app-weather">
             <p class="temp-text" aria-live="polite" data-temp>23°</p>
