@@ -261,7 +261,7 @@ h1{
 
 .aqi-row{
     height: 30px;
-    width: 80px;
+    width: 100px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -283,6 +283,7 @@ h1{
     -webkit-mask-position: center;
     mask-size: contain;
     -webkit-mask-size: contain;
+    opacity: var(--primary-opacity);
 }
 
 .humidity-row{
@@ -319,8 +320,6 @@ h1{
     justify-content: center;
     opacity: var(--primary-opacity);
 }
-
-
 
 .app-footer{
     grid-area: footer;
