@@ -1,11 +1,12 @@
 :root{
     --base-font-color: #fff;
     --secondary-font-color: #f2f8f2;
-    --hover-accent: #0b3a7c;
+    --hover-accent: #738ce045;
     --app-bg: #2a4d88;
     --app-accent: #7c94b8;
     --main-bg: #b1bbc8;
     --primary-opacity: 0.8;
+    --btn-accent: rgba(255, 255, 255, 0.1);
 }
 
 *{
@@ -173,8 +174,11 @@ h1{
     background-color: var(--hover-accent);
 }
 
-.unit-btn.selected{
-    background-color: var(--app-accent);
+.selected{
+    background-color: var(--btn-accent);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .feels-like{

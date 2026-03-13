@@ -1,3 +1,11 @@
+import {
+    setTemperatureCelsius,
+    setTemperatureFahrenheit
+} from "./utils.js";
+
+
+const c_btn = document.getElementById('celsius-btn');
+const f_btn = document.getElementById('fahrenheit-btn');
 const tempEl = document.querySelector('[data-temp]');
 const windEl = document.querySelector('[data-wind]');
 const humidityEl = document.querySelector('[data-humidity]');
@@ -5,7 +13,6 @@ const cityEl = document.querySelector('[data-city]');
 const dateTimeEl = document.querySelector('[data-datetime]');
 const weatherIconEl = document.querySelector('[data-weatherIcon]');
 const tempFeel = document.querySelector('[data-temp-feel]');
-const forecastDays = document.querySelectorAll(".forecast-day");
 const forecastLables = document.querySelectorAll('.forecast-day span:first-child');
 const forecastTemps = document.querySelectorAll(".forecast-temp");
 const forecastIcons = document.querySelectorAll(".forecast-weather-icon");
@@ -58,5 +65,14 @@ export function renderWeatherInfo(weatherData){
         forecastTemps[i].textContent = `${forecastTemp}°C`;
 
     });
+
+    // function call for temperature conversion
+f_btn.addEventListener('click', () => {
+    setTemperatureFahrenheit(temp_f);
+})
+
+c_btn.addEventListener('click', () => {
+    setTemperatureCelsius(temp_c);
+})
 
 }
